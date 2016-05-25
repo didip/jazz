@@ -17,7 +17,7 @@ func main() {
 	vm := otto.New()
 
 	http.HandleFunc("/", gohello)
-	http.HandleFunc("/js", jazz.JSFuncHandler(vm, "index.js"))
+	http.HandleFunc("/js", jazz.JSFuncHandler(vm, "jshandlers/index.js"))
 
 	http.ListenAndServe(":8080", nil)
 }

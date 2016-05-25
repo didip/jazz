@@ -15,6 +15,7 @@ func JSFuncHandler(vm *otto.Otto, jsModule string) func(w http.ResponseWriter, r
 		jsutil.ConfigureRequire(vm)
 		vm.Set("request", r)
 		vm.Set("response", w)
+		vm.Set("ResponseWriteString", jsutil.ResponseWriteString)
 
 		_, err := vm.Run(fmt.Sprintf(`require('%v').handle(request, response);`, jsModule))
 		if err != nil {
