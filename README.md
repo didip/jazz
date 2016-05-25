@@ -55,7 +55,7 @@ func main() {
 
 1. Write request handlers in Javascript.
 
-2. Javascript handlers are loaded during runtime, so you can refresh and see changes immediately without restarting. Just like PHP.
+2. Javascript handlers are loaded during runtime, so you can refresh and see changes immediately. Just like PHP.
 
 3. Able to require npm modules. `$NODE_PATH` is used to find modules.
 
