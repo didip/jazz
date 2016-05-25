@@ -1,3 +1,4 @@
+// Package jsutil provides various convenience functions for request/response handling
 package httputil
 
 import (

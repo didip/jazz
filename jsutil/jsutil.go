@@ -1,3 +1,4 @@
+// Package jsutil provides various convenience functions for Javascript environment
 package jsutil
 
 import (

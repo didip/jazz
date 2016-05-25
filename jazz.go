@@ -1,3 +1,4 @@
+// Package jazz provides various request handling capabilities
 package jazz
 
 import (

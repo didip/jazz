@@ -1,3 +1,6 @@
+[![GoDoc](https://godoc.org/github.com/didip/jazz?status.svg)](http://godoc.org/github.com/didip/jazz)
+[![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/didip/jazz/master/LICENSE.md)
+
 # Jazz
 
 Handle HTTP requests with style! (in Javascript)
