@@ -1,5 +1,5 @@
 module.exports = {
 	handle: function(request, response) {
-		ResponseWriteString(response, "Hello World, from Javascript")
+		ResponseUtil(response).WriteString("Hello World, from Javascript")
 	}
 }

@@ -2,7 +2,6 @@ package jsutil
 
 import (
 	"io/ioutil"
-	"net/http"
 
 	"github.com/robertkrimen/otto"
 )
@@ -33,8 +32,4 @@ func ConfigureRequire(vm *otto.Otto) {
 
 		return val
 	})
-}
-
-func ResponseWriteString(w http.ResponseWriter, content string) {
-	w.Write([]byte(content))
 }
