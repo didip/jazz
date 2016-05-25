@@ -9,15 +9,6 @@ Handle HTTP requests with style (in Javascript).
 > Javascript and Go belong together. I should be able to use npm modules inside my Go runtime.
 
 
-## Design Goals
-
-1. Simple and consistent handler API on JS land.
-
-2. Able to require npm modules. Must handle npm load order correctly.
-
-3. Profit!
-
-
 ## Five Minutes Tutorial
 
 ```
@@ -58,6 +49,17 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 ```
+
+
+## Features
+
+1. Write request handlers in Javascript.
+
+2. Javascript handlers are loaded during runtime, so you can refresh and see changes immediately without restarting. Just like PHP.
+
+3. Able to require npm modules. `$NODE_PATH` is used to find modules.
+
+4. The javascript VM can further be enhanced to provide more functionalities.
 
 
 ## Why do I need this?
