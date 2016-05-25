@@ -12,11 +12,10 @@ Handle HTTP requests with style! (in Javascript)
 
 1. Simple handler API on JS land. Ideas:
 	```javascript
-	// Use the response struct from Go.
 	// /jshandlers/index.js
 	module.exports = {
 		handle: function(request, response) {
-			response.Write("<html><head>My JS Page</head><body>Hello World, from JS</body></html>")
+			ResponseWriteString(response, "Hello World, from Javascript")
 		}
 	}
 	```
