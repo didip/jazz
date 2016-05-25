@@ -8,18 +8,46 @@ Handle HTTP requests with style! (in Javascript)
 > Javascript and Go belong together. I should be able to use NPM modules for handling requests!
 
 
-## Basic Concepts
+## Design Goals
 
-1. Simple handler API on JS land. Ideas:
-	```javascript
-	// /jshandlers/index.js
-	module.exports = {
-		handle: function(request, response) {
-			ResponseWriteString(response, "Hello World, from Javascript")
-		}
-	}
-	```
+1. Simple and consistent handler API on JS land.
 
-2. Able to require NPM modules.
+2. Able to require NPM modules. Must handle NPM load order correctly.
 
 3. Profit!
+
+
+## Five Minutes Tutorial
+
+```
+// 1. Write your javascript modules. Example: jshandlers/index.js
+// module.exports = {
+// 	 handle: function(request, response) {
+//	 	 ResponseWriteString(response, "Hello World, from Javascript")
+//	 }
+// }
+
+// 2. Write your Go project
+package main
+
+import (
+	"fmt"
+	"net/http"
+
+	"github.com/didip/jazz"
+	"github.com/robertkrimen/otto"
+)
+
+func gohello(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello World, from Go")
+}
+
+func main() {
+	vm := otto.New()
+
+	http.HandleFunc("/", gohello)
+	http.HandleFunc("/js", jazz.JSFuncHandler(vm, "jshandlers/index.js"))
+
+	http.ListenAndServe(":8080", nil)
+}
+```

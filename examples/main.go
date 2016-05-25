@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/robertkrimen/otto"
-
 	"github.com/didip/jazz"
+	"github.com/robertkrimen/otto"
 )
 
 func gohello(w http.ResponseWriter, r *http.Request) {
