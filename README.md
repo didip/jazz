@@ -23,7 +23,7 @@ Handle HTTP requests with style! (in Javascript)
 // 1. Write your javascript modules. Example: jshandlers/index.js
 // module.exports = {
 // 	 handle: function(request, response) {
-//	 	 ResponseWriteString(response, "Hello World, from Javascript")
+//	 	 ResponseUtil(response).WriteString("Hello World, from Javascript")
 //	 }
 // }
 
