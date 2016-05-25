@@ -62,9 +62,11 @@ func main() {
 
 ## Why do I need this?
 
-1. You have this very important npm module that does not have Go equivalent.
+1. You want to provide extensibility to your Go HTTP service.
 
-2. You are just hacking for fun, wanting to see what's possible.
+2. You have this very important npm module that does not have Go equivalent.
+
+3. You are just hacking for fun, wanting to see what's possible.
 
 
 ## Otto Caveats
